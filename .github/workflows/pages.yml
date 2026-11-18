@@ -1,6 +1,9 @@
-# Deploys the portfolio (task-1-portfolio/) to GitHub Pages on every push to main.
-# One-time setup: repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
-name: Deploy portfolio to GitHub Pages
+# Publishes the whole project to GitHub Pages on every push to main:
+#   /                          -> task-1-portfolio (the home page)
+#   /task-2-task-manager/      -> Task 2
+#   /task-4-ecommerce-store/   -> Task 4
+# One-time setup: repo Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
@@ -21,8 +24,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -r task-1-portfolio/. _site/
+          for d in task-*-*; do
+            [ "$d" = "task-1-portfolio" ] || cp -r "$d" "_site/$d"
+          done
+          find _site -maxdepth 2 -type d
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: task-1-portfolio
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
