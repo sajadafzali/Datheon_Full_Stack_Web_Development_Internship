@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopwave — E-Commerce Storefront</title>
+  <meta name="description" content="Responsive e-commerce storefront built with vanilla JavaScript and FakeStoreAPI." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <a href="#" class="brand" aria-label="Shopwave home">
+      <span class="brand-mark">S</span> Shopwave
+    </a>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search products…" aria-label="Search products" />
+    </div>
+    <button id="cart-btn" class="cart-btn" aria-label="Open shopping cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      <span id="cart-badge" class="badge" hidden>0</span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <h1>Everything you need, one wave away.</h1>
+    <p>Free shipping on orders over $100.</p>
+  </section>
+
+  <!-- ============ TOOLBAR: categories + sort ============ -->
+  <section class="toolbar">
+    <div id="filters" class="filters" role="group" aria-label="Filter by category">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="electronics">Electronics</button>
+      <button class="chip" data-category="jewelery">Jewelry</button>
+      <button class="chip" data-category="clothing">Clothing</button>
+    </div>
+    <label class="sort">
+      Sort
+      <select id="sort">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="rating">Top rated</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <main>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    Datheon Full Stack Web Development Internship · Task 1 · Data from
+    <a href="https://fakestoreapi.com" target="_blank" rel="noopener">FakeStoreAPI</a>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="drawer" class="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your Cart</h2>
+      <button id="close-cart" class="icon-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-footer" class="cart-footer">
+      <p id="ship-hint" class="ship-hint"></p>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="t-subtotal">$0.00</dd></div>
+        <div><dt>Shipping</dt><dd id="t-shipping">$0.00</dd></div>
+        <div><dt>Tax (8%)</dt><dd id="t-tax">$0.00</dd></div>
+        <div class="grand"><dt>Total</dt><dd id="t-total">$0.00</dd></div>
+      </dl>
+      <button id="checkout-btn" class="btn primary block">Checkout</button>
+      <button id="clear-btn" class="btn ghost block">Clear cart</button>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT MODAL ============ -->
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <!-- step 1: form -->
+      <form id="checkout-form" novalidate>
+        <h2 id="modal-title">Checkout</h2>
+        <p class="muted">Simulated checkout — no real payment is taken.</p>
+        <label>Full name <input name="name" required autocomplete="name" /></label>
+        <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+        <label>Shipping address <input name="address" required autocomplete="street-address" /></label>
+        <label>Card number (demo) <input name="card" inputmode="numeric" placeholder="4242 4242 4242 4242" required /></label>
+        <p id="form-error" class="error" role="alert"></p>
+        <div class="order-line">Order total: <strong id="modal-total">$0.00</strong></div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-checkout" class="btn ghost">Cancel</button>
+          <button type="submit" class="btn primary">Place order</button>
+        </div>
+      </form>
+      <!-- step 2: confirmation -->
+      <div id="confirmation" hidden>
+        <div class="check">✓</div>
+        <h2>Order confirmed!</h2>
+        <p>Thank you, <strong id="conf-name"></strong>. Your order <strong id="conf-id"></strong> is on its way.</p>
+        <p class="muted">A confirmation was “sent” to <span id="conf-email"></span>.</p>
+        <p class="conf-total">Total paid: <strong id="conf-total"></strong></p>
+        <button id="done-btn" class="btn primary block">Continue shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/fallback-products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
