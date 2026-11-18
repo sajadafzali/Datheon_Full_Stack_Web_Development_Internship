@@ -21,7 +21,7 @@ window.PROJECTS = [
     stack: ["Python", "YOLOv8", "CNN", "Streamlit"],
     theme: "violet",
     icon: "🧠",
-    links: [{ label: "Source code", href: "https://github.com/sajadafzali/face-detection-system" }],
+   links: [],
   },
   {
     id: "weather-app",
@@ -39,7 +39,7 @@ window.PROJECTS = [
     stack: ["Python", "PyQt5", "OpenWeatherMap API", "scikit-learn", "MySQL"],
     theme: "blue",
     icon: "⛅",
-    links: [{ label: "Source code", href: "https://i/ai-weather-app" }],
+   links: [],
   },
   {
     id: "shopwave",
