@@ -21,7 +21,7 @@ window.PROJECTS = [
     stack: ["Python", "YOLOv8", "CNN", "Streamlit"],
     theme: "violet",
     icon: "🧠",
-    links: [{ label: "Source code", href: "https://github.com/Sajad-Afzali/face-detection-system" }],
+    links: [{ label: "Source code", href: "https://github.com/sajadafzali/face-detection-system" }],
   },
   {
     id: "weather-app",
@@ -39,7 +39,7 @@ window.PROJECTS = [
     stack: ["Python", "PyQt5", "OpenWeatherMap API", "scikit-learn", "MySQL"],
     theme: "blue",
     icon: "⛅",
-    links: [{ label: "Source code", href: "https://github.com/Sajad-Afzali/ai-weather-app" }],
+    links: [{ label: "Source code", href: "https://i/ai-weather-app" }],
   },
   {
     id: "shopwave",
@@ -57,6 +57,6 @@ window.PROJECTS = [
     stack: ["JavaScript (ES6+)", "HTML5", "CSS Grid", "FakeStoreAPI"],
     theme: "amber",
     icon: "🛍️",
-    links: [{ label: "Source code", href: "https://github.com/Sajad-Afzali/Datheon_Full_Stack_Web_Development_Internship/tree/main/task-4-ecommerce-store" }],
+    links: [{ label: "Source code", href: "https:///Datheon_Full_Stack_Web_Development_Internship/tree/main/task-4-ecommerce-store" }],
   },
  ];

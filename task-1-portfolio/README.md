@@ -2,7 +2,7 @@
 
 A responsive, modern developer portfolio built with **semantic HTML5, mobile-first CSS (Flexbox + Grid) and vanilla JavaScript (ES6+)**. No frameworks or build step.
 
-**🔗 Live site:** https://sajad-afzali.github.io/Datheon_Full_Stack_Web_Development_Internship/
+**🔗 Live site:** https://sajadafzali.github.io/Datheon_Full_Stack_Web_Development_Internship/
 
 ## Features
 - **Semantic structure:** `header`, `nav`, `main`, `section`, `article`, `footer`; Hero, About, Skills, Projects, Resume, Contact.
@@ -41,4 +41,5 @@ It can also be deployed on Vercel or Netlify by setting the root directory to `t
 HTML5 · CSS3 (custom properties, Grid, Flexbox, `color-mix`) · JavaScript ES6+ · GitHub Pages
 
 ## Author
-**Sajad Afzali** — [GitHub](https://github.com/Sajad-Afzali) · [LinkedIn](https://www.linkedin.com/in/sajad-afzali-73a87b438/)
+**Sajad Afzali** — [GitHub](https://
+github.com/sajadafzali) · [LinkedIn](https://www.linkedin.com/in/sajad-afzali-73a87b438/)

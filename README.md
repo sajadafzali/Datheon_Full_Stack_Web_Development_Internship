@@ -2,7 +2,7 @@
 
 Project repository for the Datheon Full Stack Web Development Internship (Batch 01) by **Sajad Afzali**.
 
-**🔗 Live portfolio:** https://sajad-afzali.github.io/Datheon_Full_Stack_Web_Development_Internship/
+**🔗 Live portfolio:** https://sajadafzali.github.io/Datheon_Full_Stack_Web_Development_Internship/
 
 | Task | Description | Status | Folder |
 |------|-------------|--------|--------|
@@ -18,4 +18,4 @@ Vanilla-JavaScript store: FakeStoreAPI products, category filters, search and so
 Details: [`task-4-ecommerce-store/README.md`](./task-4-ecommerce-store/README.md)
 
 ## Author
-**Sajad Afzali** — [GitHub](https://github.com/Sajad-Afzali) · [LinkedIn](https://www.linkedin.com/in/sajad-afzali-73a87b438/)
+**Sajad Afzali** — [GitHub](https://github.com/github.com/sajadafzali) · [LinkedIn](https://www.linkedin.com/in/github.com/sajadafzali-73a87b438/)
